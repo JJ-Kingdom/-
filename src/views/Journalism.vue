@@ -1,5 +1,5 @@
 <template lang="pug">
-  .home home
+  .journalism journalism
 </template>
 
 <script>

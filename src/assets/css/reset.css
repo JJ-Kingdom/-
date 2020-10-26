@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    -webkit-overflow-scrolling: touch;
+    user-select: none;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    /* background: #000 url(../img/bg.png) no-repeat center top; */
+    /* background-size: cover; */
+    font-family: 'PingFangTC-light', 'Lantinghei SC', 'PingFang SC', 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+input,
+button,
+textarea {
+    font: inherit;
+}
+
+a,
+img {
+    -webkit-touch-callout: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: normal;
+}
