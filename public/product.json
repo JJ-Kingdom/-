@@ -1,0 +1,558 @@
+[{
+    "data":[
+        {
+            "id":1,
+            "image":"./assets/ProductsImage/1.png",
+            "title":"加大加厚全棉强力吸水毛巾",
+            "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+            "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+            "item":{
+                "brand":"品牌: 煊赫",
+                "quality":"材质: 100%纯棉",
+                "color":"颜色分类: 蓝色 米白 咖啡",
+                "specifications":"产品规格: 70*140CM",
+                "standard":"执行标准: GB/T22864-2009",
+                "security":"安全标准: GB18401-2010(B类)",
+                "Level":"产品登记: 一等品(合格)",
+                "model":"产品型号: DF14-OSF"
+            }
+
+        },{
+            "id":2,
+            "image":"./assets/ProductsImage/2.png",
+            "title":"加大加厚全棉强力吸水毛巾",
+            "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+            "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+            "item":{
+                "brand":"品牌: 煊赫",
+                "quality":"材质: 100%纯棉",
+                "color":"颜色分类: 蓝色 米白 咖啡",
+                "specifications":"产品规格: 70*140CM",
+                "standard":"执行标准: GB/T22864-2009",
+                "security":"安全标准: GB18401-2010(B类)",
+                "Level":"产品登记: 一等品(合格)",
+                "model":"产品型号: DF14-OSF"
+            }}
+            ,{
+                "id":3,
+                "image":"./assets/ProductsImage/3.png",
+                "title":"加大加厚全棉强力吸水毛巾",
+                "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+                "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+                "item":{
+                    "brand":"品牌: 煊赫",
+                    "quality":"材质: 100%纯棉",
+                    "color":"颜色分类: 蓝色 米白 咖啡",
+                    "specifications":"产品规格: 70*140CM",
+                    "standard":"执行标准: GB/T22864-2009",
+                    "security":"安全标准: GB18401-2010(B类)",
+                    "Level":"产品登记: 一等品(合格)",
+                    "model":"产品型号: DF14-OSF"
+                }
+
+
+        },{
+                "id":4,
+                "image":"./assets/ProductsImage/4.png",
+                "title":"加大加厚全棉强力吸水毛巾",
+                "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+                "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+                "item":{
+                    "brand":"品牌: 煊赫",
+                    "quality":"材质: 100%纯棉",
+                    "color":"颜色分类: 蓝色 米白 咖啡",
+                    "specifications":"产品规格: 70*140CM",
+                    "standard":"执行标准: GB/T22864-2009",
+                    "security":"安全标准: GB18401-2010(B类)",
+                    "Level":"产品登记: 一等品(合格)",
+                    "model":"产品型号: DF14-OSF"
+                }
+                
+
+        },
+        {
+            "id":1,
+            "image":"./assets/ProductsImage/1.png",
+            "title":"加大加厚全棉强力吸水毛巾",
+            "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+            "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+            "item":{
+                "brand":"品牌: 煊赫",
+                "quality":"材质: 100%纯棉",
+                "color":"颜色分类: 蓝色 米白 咖啡",
+                "specifications":"产品规格: 70*140CM",
+                "standard":"执行标准: GB/T22864-2009",
+                "security":"安全标准: GB18401-2010(B类)",
+                "Level":"产品登记: 一等品(合格)",
+                "model":"产品型号: DF14-OSF"
+            }
+
+        },{
+            "id":2,
+            "image":"./assets/ProductsImage/2.png",
+            "title":"加大加厚全棉强力吸水毛巾",
+            "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+            "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+            "item":{
+                "brand":"品牌: 煊赫",
+                "quality":"材质: 100%纯棉",
+                "color":"颜色分类: 蓝色 米白 咖啡",
+                "specifications":"产品规格: 70*140CM",
+                "standard":"执行标准: GB/T22864-2009",
+                "security":"安全标准: GB18401-2010(B类)",
+                "Level":"产品登记: 一等品(合格)",
+                "model":"产品型号: DF14-OSF"
+            }}
+            ,{
+                "id":3,
+                "image":"./assets/ProductsImage/3.png",
+                "title":"加大加厚全棉强力吸水毛巾",
+                "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+                "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+                "item":{
+                    "brand":"品牌: 煊赫",
+                    "quality":"材质: 100%纯棉",
+                    "color":"颜色分类: 蓝色 米白 咖啡",
+                    "specifications":"产品规格: 70*140CM",
+                    "standard":"执行标准: GB/T22864-2009",
+                    "security":"安全标准: GB18401-2010(B类)",
+                    "Level":"产品登记: 一等品(合格)",
+                    "model":"产品型号: DF14-OSF"
+                }
+
+
+        },{
+                "id":4,
+                "image":"./assets/ProductsImage/4.png",
+                "title":"加大加厚全棉强力吸水毛巾",
+                "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+                "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+                "item":{
+                    "brand":"品牌: 煊赫",
+                    "quality":"材质: 100%纯棉",
+                    "color":"颜色分类: 蓝色 米白 咖啡",
+                    "specifications":"产品规格: 70*140CM",
+                    "standard":"执行标准: GB/T22864-2009",
+                    "security":"安全标准: GB18401-2010(B类)",
+                    "Level":"产品登记: 一等品(合格)",
+                    "model":"产品型号: DF14-OSF"
+                }
+                
+
+        },{
+            "id":1,
+            "image":"./assets/ProductsImage/1.png",
+            "title":"加大加厚全棉强力吸水毛巾",
+            "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+            "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+            "item":{
+                "brand":"品牌: 煊赫",
+                "quality":"材质: 100%纯棉",
+                "color":"颜色分类: 蓝色 米白 咖啡",
+                "specifications":"产品规格: 70*140CM",
+                "standard":"执行标准: GB/T22864-2009",
+                "security":"安全标准: GB18401-2010(B类)",
+                "Level":"产品登记: 一等品(合格)",
+                "model":"产品型号: DF14-OSF"
+            }
+
+        },{
+            "id":2,
+            "image":"./assets/ProductsImage/2.png",
+            "title":"加大加厚全棉强力吸水毛巾",
+            "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+            "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+            "item":{
+                "brand":"品牌: 煊赫",
+                "quality":"材质: 100%纯棉",
+                "color":"颜色分类: 蓝色 米白 咖啡",
+                "specifications":"产品规格: 70*140CM",
+                "standard":"执行标准: GB/T22864-2009",
+                "security":"安全标准: GB18401-2010(B类)",
+                "Level":"产品登记: 一等品(合格)",
+                "model":"产品型号: DF14-OSF"
+            }}
+            ,{
+                "id":3,
+                "image":"./assets/ProductsImage/3.png",
+                "title":"加大加厚全棉强力吸水毛巾",
+                "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+                "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+                "item":{
+                    "brand":"品牌: 煊赫",
+                    "quality":"材质: 100%纯棉",
+                    "color":"颜色分类: 蓝色 米白 咖啡",
+                    "specifications":"产品规格: 70*140CM",
+                    "standard":"执行标准: GB/T22864-2009",
+                    "security":"安全标准: GB18401-2010(B类)",
+                    "Level":"产品登记: 一等品(合格)",
+                    "model":"产品型号: DF14-OSF"
+                }
+
+
+        },{
+                "id":4,
+                "image":"./assets/ProductsImage/4.png",
+                "title":"加大加厚全棉强力吸水毛巾",
+                "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+                "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+                "item":{
+                    "brand":"品牌: 煊赫",
+                    "quality":"材质: 100%纯棉",
+                    "color":"颜色分类: 蓝色 米白 咖啡",
+                    "specifications":"产品规格: 70*140CM",
+                    "standard":"执行标准: GB/T22864-2009",
+                    "security":"安全标准: GB18401-2010(B类)",
+                    "Level":"产品登记: 一等品(合格)",
+                    "model":"产品型号: DF14-OSF"
+                }
+                
+
+        },{
+            "id":1,
+            "image":"./assets/ProductsImage/1.png",
+            "title":"加大加厚全棉强力吸水毛巾",
+            "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+            "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+            "item":{
+                "brand":"品牌: 煊赫",
+                "quality":"材质: 100%纯棉",
+                "color":"颜色分类: 蓝色 米白 咖啡",
+                "specifications":"产品规格: 70*140CM",
+                "standard":"执行标准: GB/T22864-2009",
+                "security":"安全标准: GB18401-2010(B类)",
+                "Level":"产品登记: 一等品(合格)",
+                "model":"产品型号: DF14-OSF"
+            }
+
+        },{
+            "id":2,
+            "image":"./assets/ProductsImage/2.png",
+            "title":"加大加厚全棉强力吸水毛巾",
+            "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+            "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+            "item":{
+                "brand":"品牌: 煊赫",
+                "quality":"材质: 100%纯棉",
+                "color":"颜色分类: 蓝色 米白 咖啡",
+                "specifications":"产品规格: 70*140CM",
+                "standard":"执行标准: GB/T22864-2009",
+                "security":"安全标准: GB18401-2010(B类)",
+                "Level":"产品登记: 一等品(合格)",
+                "model":"产品型号: DF14-OSF"
+            }}
+            ,{
+                "id":3,
+                "image":"./assets/ProductsImage/3.png",
+                "title":"加大加厚全棉强力吸水毛巾",
+                "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+                "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+                "item":{
+                    "brand":"品牌: 煊赫",
+                    "quality":"材质: 100%纯棉",
+                    "color":"颜色分类: 蓝色 米白 咖啡",
+                    "specifications":"产品规格: 70*140CM",
+                    "standard":"执行标准: GB/T22864-2009",
+                    "security":"安全标准: GB18401-2010(B类)",
+                    "Level":"产品登记: 一等品(合格)",
+                    "model":"产品型号: DF14-OSF"
+                }
+
+
+        },{
+                "id":4,
+                "image":"./assets/ProductsImage/4.png",
+                "title":"加大加厚全棉强力吸水毛巾",
+                "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+                "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+                "item":{
+                    "brand":"品牌: 煊赫",
+                    "quality":"材质: 100%纯棉",
+                    "color":"颜色分类: 蓝色 米白 咖啡",
+                    "specifications":"产品规格: 70*140CM",
+                    "standard":"执行标准: GB/T22864-2009",
+                    "security":"安全标准: GB18401-2010(B类)",
+                    "Level":"产品登记: 一等品(合格)",
+                    "model":"产品型号: DF14-OSF"
+                }
+                
+
+        },{
+            "id":1,
+            "image":"./assets/ProductsImage/1.png",
+            "title":"加大加厚全棉强力吸水毛巾",
+            "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+            "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+            "item":{
+                "brand":"品牌: 煊赫",
+                "quality":"材质: 100%纯棉",
+                "color":"颜色分类: 蓝色 米白 咖啡",
+                "specifications":"产品规格: 70*140CM",
+                "standard":"执行标准: GB/T22864-2009",
+                "security":"安全标准: GB18401-2010(B类)",
+                "Level":"产品登记: 一等品(合格)",
+                "model":"产品型号: DF14-OSF"
+            }
+
+        },{
+            "id":2,
+            "image":"./assets/ProductsImage/2.png",
+            "title":"加大加厚全棉强力吸水毛巾",
+            "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+            "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+            "item":{
+                "brand":"品牌: 煊赫",
+                "quality":"材质: 100%纯棉",
+                "color":"颜色分类: 蓝色 米白 咖啡",
+                "specifications":"产品规格: 70*140CM",
+                "standard":"执行标准: GB/T22864-2009",
+                "security":"安全标准: GB18401-2010(B类)",
+                "Level":"产品登记: 一等品(合格)",
+                "model":"产品型号: DF14-OSF"
+            }}
+            ,{
+                "id":3,
+                "image":"./assets/ProductsImage/3.png",
+                "title":"加大加厚全棉强力吸水毛巾",
+                "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+                "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+                "item":{
+                    "brand":"品牌: 煊赫",
+                    "quality":"材质: 100%纯棉",
+                    "color":"颜色分类: 蓝色 米白 咖啡",
+                    "specifications":"产品规格: 70*140CM",
+                    "standard":"执行标准: GB/T22864-2009",
+                    "security":"安全标准: GB18401-2010(B类)",
+                    "Level":"产品登记: 一等品(合格)",
+                    "model":"产品型号: DF14-OSF"
+                }
+
+
+        },{
+                "id":4,
+                "image":"./assets/ProductsImage/4.png",
+                "title":"加大加厚全棉强力吸水毛巾",
+                "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+                "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+                "item":{
+                    "brand":"品牌: 煊赫",
+                    "quality":"材质: 100%纯棉",
+                    "color":"颜色分类: 蓝色 米白 咖啡",
+                    "specifications":"产品规格: 70*140CM",
+                    "standard":"执行标准: GB/T22864-2009",
+                    "security":"安全标准: GB18401-2010(B类)",
+                    "Level":"产品登记: 一等品(合格)",
+                    "model":"产品型号: DF14-OSF"
+                }
+                
+
+        },{
+            "id":1,
+            "image":"./assets/ProductsImage/1.png",
+            "title":"加大加厚全棉强力吸水毛巾",
+            "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+            "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+            "item":{
+                "brand":"品牌: 煊赫",
+                "quality":"材质: 100%纯棉",
+                "color":"颜色分类: 蓝色 米白 咖啡",
+                "specifications":"产品规格: 70*140CM",
+                "standard":"执行标准: GB/T22864-2009",
+                "security":"安全标准: GB18401-2010(B类)",
+                "Level":"产品登记: 一等品(合格)",
+                "model":"产品型号: DF14-OSF"
+            }
+
+        },{
+            "id":2,
+            "image":"./assets/ProductsImage/2.png",
+            "title":"加大加厚全棉强力吸水毛巾",
+            "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+            "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+            "item":{
+                "brand":"品牌: 煊赫",
+                "quality":"材质: 100%纯棉",
+                "color":"颜色分类: 蓝色 米白 咖啡",
+                "specifications":"产品规格: 70*140CM",
+                "standard":"执行标准: GB/T22864-2009",
+                "security":"安全标准: GB18401-2010(B类)",
+                "Level":"产品登记: 一等品(合格)",
+                "model":"产品型号: DF14-OSF"
+            }}
+            ,{
+                "id":3,
+                "image":"./assets/ProductsImage/3.png",
+                "title":"加大加厚全棉强力吸水毛巾",
+                "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+                "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+                "item":{
+                    "brand":"品牌: 煊赫",
+                    "quality":"材质: 100%纯棉",
+                    "color":"颜色分类: 蓝色 米白 咖啡",
+                    "specifications":"产品规格: 70*140CM",
+                    "standard":"执行标准: GB/T22864-2009",
+                    "security":"安全标准: GB18401-2010(B类)",
+                    "Level":"产品登记: 一等品(合格)",
+                    "model":"产品型号: DF14-OSF"
+                }
+
+
+        },{
+                "id":4,
+                "image":"./assets/ProductsImage/4.png",
+                "title":"加大加厚全棉强力吸水毛巾",
+                "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+                "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+                "item":{
+                    "brand":"品牌: 煊赫",
+                    "quality":"材质: 100%纯棉",
+                    "color":"颜色分类: 蓝色 米白 咖啡",
+                    "specifications":"产品规格: 70*140CM",
+                    "standard":"执行标准: GB/T22864-2009",
+                    "security":"安全标准: GB18401-2010(B类)",
+                    "Level":"产品登记: 一等品(合格)",
+                    "model":"产品型号: DF14-OSF"
+                }
+                
+
+        },{
+            "id":1,
+            "image":"./assets/ProductsImage/1.png",
+            "title":"加大加厚全棉强力吸水毛巾",
+            "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+            "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+            "item":{
+                "brand":"品牌: 煊赫",
+                "quality":"材质: 100%纯棉",
+                "color":"颜色分类: 蓝色 米白 咖啡",
+                "specifications":"产品规格: 70*140CM",
+                "standard":"执行标准: GB/T22864-2009",
+                "security":"安全标准: GB18401-2010(B类)",
+                "Level":"产品登记: 一等品(合格)",
+                "model":"产品型号: DF14-OSF"
+            }
+
+        },{
+            "id":2,
+            "image":"./assets/ProductsImage/2.png",
+            "title":"加大加厚全棉强力吸水毛巾",
+            "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+            "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+            "item":{
+                "brand":"品牌: 煊赫",
+                "quality":"材质: 100%纯棉",
+                "color":"颜色分类: 蓝色 米白 咖啡",
+                "specifications":"产品规格: 70*140CM",
+                "standard":"执行标准: GB/T22864-2009",
+                "security":"安全标准: GB18401-2010(B类)",
+                "Level":"产品登记: 一等品(合格)",
+                "model":"产品型号: DF14-OSF"
+            }}
+            ,{
+                "id":3,
+                "image":"./assets/ProductsImage/3.png",
+                "title":"加大加厚全棉强力吸水毛巾",
+                "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+                "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+                "item":{
+                    "brand":"品牌: 煊赫",
+                    "quality":"材质: 100%纯棉",
+                    "color":"颜色分类: 蓝色 米白 咖啡",
+                    "specifications":"产品规格: 70*140CM",
+                    "standard":"执行标准: GB/T22864-2009",
+                    "security":"安全标准: GB18401-2010(B类)",
+                    "Level":"产品登记: 一等品(合格)",
+                    "model":"产品型号: DF14-OSF"
+                }
+
+
+        },{
+                "id":4,
+                "image":"./assets/ProductsImage/4.png",
+                "title":"加大加厚全棉强力吸水毛巾",
+                "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+                "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+                "item":{
+                    "brand":"品牌: 煊赫",
+                    "quality":"材质: 100%纯棉",
+                    "color":"颜色分类: 蓝色 米白 咖啡",
+                    "specifications":"产品规格: 70*140CM",
+                    "standard":"执行标准: GB/T22864-2009",
+                    "security":"安全标准: GB18401-2010(B类)",
+                    "Level":"产品登记: 一等品(合格)",
+                    "model":"产品型号: DF14-OSF"
+                }
+                
+
+        },{
+            "id":1,
+            "image":"./assets/ProductsImage/1.png",
+            "title":"加大加厚全棉强力吸水毛巾",
+            "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+            "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+            "item":{
+                "brand":"品牌: 煊赫",
+                "quality":"材质: 100%纯棉",
+                "color":"颜色分类: 蓝色 米白 咖啡",
+                "specifications":"产品规格: 70*140CM",
+                "standard":"执行标准: GB/T22864-2009",
+                "security":"安全标准: GB18401-2010(B类)",
+                "Level":"产品登记: 一等品(合格)",
+                "model":"产品型号: DF14-OSF"
+            }
+
+        },{
+            "id":2,
+            "image":"./assets/ProductsImage/2.png",
+            "title":"加大加厚全棉强力吸水毛巾",
+            "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+            "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+            "item":{
+                "brand":"品牌: 煊赫",
+                "quality":"材质: 100%纯棉",
+                "color":"颜色分类: 蓝色 米白 咖啡",
+                "specifications":"产品规格: 70*140CM",
+                "standard":"执行标准: GB/T22864-2009",
+                "security":"安全标准: GB18401-2010(B类)",
+                "Level":"产品登记: 一等品(合格)",
+                "model":"产品型号: DF14-OSF"
+            }}
+            ,{
+                "id":3,
+                "image":"./assets/ProductsImage/3.png",
+                "title":"加大加厚全棉强力吸水毛巾",
+                "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+                "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+                "item":{
+                    "brand":"品牌: 煊赫",
+                    "quality":"材质: 100%纯棉",
+                    "color":"颜色分类: 蓝色 米白 咖啡",
+                    "specifications":"产品规格: 70*140CM",
+                    "standard":"执行标准: GB/T22864-2009",
+                    "security":"安全标准: GB18401-2010(B类)",
+                    "Level":"产品登记: 一等品(合格)",
+                    "model":"产品型号: DF14-OSF"
+                }
+
+
+        },{
+                "id":4,
+                "image":"./assets/ProductsImage/4.png",
+                "title":"加大加厚全棉强力吸水毛巾",
+                "cont":"精致断档工艺，五星酒店标准，强力吸水，亲肤舒适",
+                "advantage":"全棉加厚/缩水率低/绿色环保/耐洗耐用",
+                "item":{
+                    "brand":"品牌: 煊赫",
+                    "quality":"材质: 100%纯棉",
+                    "color":"颜色分类: 蓝色 米白 咖啡",
+                    "specifications":"产品规格: 70*140CM",
+                    "standard":"执行标准: GB/T22864-2009",
+                    "security":"安全标准: GB18401-2010(B类)",
+                    "Level":"产品登记: 一等品(合格)",
+                    "model":"产品型号: DF14-OSF"
+                }
+                
+
+        }
+    ]
+}]
