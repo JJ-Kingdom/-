@@ -10,8 +10,13 @@ import User from '../views/User.vue'
 
 Vue.use(VueRouter)
 
-const routes = [{
-        path: '/',
+const routes = [
+    {
+        path:'/',
+        redirect: "/home"
+    }
+    ,{
+        path: '/home',
         name: 'Home',
         component: Home
     },

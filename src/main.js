@@ -9,14 +9,14 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
 import 'animate.css'
-
+import HeaderBox from '@/components/commit/header.vue'
 
 
 Vue.prototype.$http = axios
 
 Vue.use(ElementUI)
 
-
+Vue.component('header-box',HeaderBox)
 
 Vue.config.productionTip = false
 
