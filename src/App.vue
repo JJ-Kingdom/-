@@ -9,6 +9,9 @@
     router-view
 </template>
 
-<style lang="stylus">
-
+<style lang="sass">
+    .nav
+      position: relative
+      z-index: 999
+      font-size: .16rem
 </style>
