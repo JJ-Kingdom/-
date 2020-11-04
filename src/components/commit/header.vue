@@ -1,18 +1,13 @@
 <template lang='pug'>
 .header-box
-  el-row(:gutter="10")
-    el-col(:xs="4", :sm="4", :md="4", :lg="4", :xl="2")
-      .grid-content.bg-purple
-      .imgbox
-        img(src="../../assets/image/1.png")
-    el-col(:xs="8" :sm="8" :md="8" :lg="8" :xl="10")
-      .grid-content.bg-purple-light
-        ul
-          li(v-for="item in TitleList")
-            router-link(:to="item.router")
-              .title {{ item.title }}
-              .alias {{ item.alias }}
-              .pitch
+  .imgbox
+    img(src="../../assets/image/1.png")
+  ul
+    li(v-for="item in TitleList")
+      router-link(:to="item.router")
+        .title {{ item.title }}
+        .alias {{ item.alias }}
+        .pitch
 </template>
 
 <script>
@@ -52,32 +47,45 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@media screen and (max-width: 1200px)
+  .header-box
+      height: 1rem
+      font-size: .12rem
+@media screen and (min-width: 1200px)
+  .header-wrap
+    height: 1rem
 .header-box
+  z-index: 100
+  width: 100%
+  font-size: .14rem
+  position: fixed
+  top: 0
+  left: 0
   display: flex
+  justify-content: center
   background-color: #000
-  background: rgba(0,0,0,.1)
-  height: 1rem
+  background: rgba(0,0,0,.3)
   border-bottom: 1px solid #fff
   .imgbox
-    padding: 0
-    width: 1.18rem
-    height: auto
-    margin-left: 1rem
-    img
-      height: 100%
-  ul
-    width: 10rem
-    margin-left: 3rem
     display: flex
+    align-items: center
+    transform: translateX(-1rem)
+    img
+      width: 1.18rem
+      height: auto
+      display: block
+      marin: auto
+  ul
+    display: flex
+    transform: translateX(1rem)
     li
       position: relative
-      flex: 1
-      height: 1rem
-      font-size: .16rem
       text-align: center
-      padding: .28rem
+      padding-top: .2rem
+      margin-left: 20px
       a
         color: #fff
+        flex: 1
         &.router-link-active
           color: #f1daa7
           .pitch
