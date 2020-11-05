@@ -10,21 +10,29 @@
             h2.cnproduct 产品中心
             .product-body
               .product-body-tab-box
-                .product-tab-item(v-for='(item,index) in ProductArr' :key="index" :class='index==tabindex?"active":""' @click="tabindex=index")
+                .product-tab-item(v-for='(item,indexs) in ProductArr' :key="indexs" :class='indexs==tabindex?"active":""' @click="tabindex=indexs")
                   .tab-item-left
                     .item-left-box
                   .tab-item-right {{item.all}}
               .commodity-box
                 transition(:name="tabname")
                   .commodity-box-items(v-show="tabflag" )
-                    .commodity-box-item(v-for="(item,index) in ShowArr" :key="index"  :class='ItemClass')
-                      .box-item-img
-                        img(:src="item.image")
-                      .box-item-title {{item.title}}
-                      .box-item-cont {{item.cont}}
-                      .box-item-more 
-                        .text 查看更多
-              el-pagination(background layout="prev, pager, next" :total="PaginationLength" :page-size='4' @current-change="total"  :current-page.sync="page")
+                    .commodity-box-item(v-for="(item,index) in ShowArr" :key="index"  :class='ItemClass' )
+                      .box-item-max(@click="$router.push({name:'ProductsItem',params:{'index':tabindex,'id':item.id}})")
+                        .box-item-img
+                          img(:src="item.image")
+                        .box-item-title {{item.title}}
+                        .box-item-cont {{item.cont}}
+                        .box-item-more 
+                          .text 查看更多
+             
+              el-pagination(background layout="prev, pager, next" :disabled="disabled" :total="PaginationLength" :page-size='4' @current-change="total"  :current-page.sync="page" prev-text="上一页" next-text="下一页" :layout="'prev, pager, next,slot'" )
+                slot
+                  .index(@click="page=1") 首页
+                  .unindex(@click="page=PaginationLength/4") 末页
+
+               
+
 
 
 
@@ -37,7 +45,7 @@ export default {
   data() {
     return {
       ProductArr:[],
-      tabindex:0,
+      tabindex:'',
       CommodityArr:[],
       PaginationLength:0,
       ShowArr:[],
@@ -49,19 +57,31 @@ export default {
       timer:null,
       ItemClass:'',
       ItemFlage:true,
-      settime:null
+      settime:null,
+      disabled:false
     }
   },
-  mounted() {
-    this.$http.get("http://localhost:8080/product.json").then(data=>{
+  created() {
+   
+       this.$http.get("http://localhost:8080/product.json").then(data=>{
+         if(this.$route.params.index){
+      console.log(this.$route.params.index)
+      this.tabindex=this.$route.params.index
+    }
       this.ProductArr=data.data
       this.CommodityArr=data.data[this.tabindex].data
+      console.log(this.CommodityArr)
       this.PaginationLength=this.CommodityArr.length
       let num=(this.page-1)*4
       this.ShowArr=this.CommodityArr.slice(num,num+4)
       console.log(this.ShowArr)
+       
 
     })
+  },
+  mounted() {
+    
+ 
   },
   methods: {
    total(e){
@@ -96,7 +116,14 @@ export default {
   },
   watch: {
     page(news,out){
+      if(this.settime!=null){
+       return false
+        // this.ItemClass=" "
+      }
       console.log(this.timer)
+        this.ItemClass=" "
+
+      clearTimeout(this.settime)
        if(this.timer){
          clearTimeout(this.timer)
          this.tabname=" "
@@ -114,14 +141,22 @@ export default {
      
     },
     tabindex(news){
+     let newsr=news||this.$route.params.index
+      console.log(newsr)
+      this.tabname=" "
+      this.page=1
       this.ItemClass='enter'
-     
-      this.CommodityArr=this.ProductArr[news].data
+     this.disabled=true
+      this.CommodityArr=this.ProductArr[newsr].data
       console.log(this.CommodityArr)
       this.PaginationLength=this.CommodityArr.length
+      clearTimeout(this.settime)
       this.settime=setTimeout(()=>{
       this.ItemClass='out'
-      },2500)
+      this.settime=null
+     this.disabled=false
+
+      },1000)
     }
   },
   thisindex(){
@@ -129,7 +164,7 @@ export default {
   }
 }
 </script>
-<style lang="sass">
+<style lang="sass" >
   .product
     width: 100vw
     height: 100vh
@@ -164,9 +199,9 @@ export default {
           height: 100%
           transform: translateX(.5%)
           z-index: -2
-          filter: blur(5px) 
-          background-image: url("~@/assets/ProductsImage/background.png")
+          filter: blur(2px) 
           // background-color: rgba(255,255,255 , .1)
+          background: url("~@/assets/ProductsImage/background.png")
           background-size: cover
           // box-shadow: 0 0 .1rem #000
       .product-box
@@ -193,11 +228,14 @@ export default {
             text-align: center
             font-size: .5rem
             margin-top: .2rem
+            animation: product-title  .5s
           .cnproduct
             text-align: center
             color: #c4b28a
             font-size: .3rem
+            animation: product-title  .8s
           .product-body
+            margin: 0 auto
             .el-pagination
               position: fixed
               left: 50%
@@ -210,7 +248,14 @@ export default {
                 background: transparent
                 border: solid 1px #fff
                 height: .4rem
+                font-size: .2rem
                 line-height: .4rem
+                span
+                  height: .4rem
+                  font-size: .2rem
+                  line-height: .4rem
+                  display: block
+                  color: #fff
               li
                 height: .4rem
                 background: transparent
@@ -222,24 +267,64 @@ export default {
                   color: #000
                 &:hover
                   color: #606266
+              slot
+                .index
+                  position: absolute
+                  left: -.87rem
+                  width: .85rem
+                  top: 8%
+                  height: .4rem
+                  font-size: .2rem
+                  line-height: .4rem
+                  text-align: center
+                  border: solid 1px #fff
+                .unindex
+                  width: .85rem
+                  position: absolute
+                  text-align: center
+                  right: -.87rem
+                  top: 8%
+                  height: .4rem
+                  font-size: .2rem
+                  line-height: .4rem
+                  border: solid 1px #fff
             .product-body-tab-box
               margin:  auto
               width: 9.9rem
-              height: .4rem
+              height: .5rem
               margin-top: .2rem
               display: flex
               font-size: .25rem
-              
-              justify-content: space-between
+              overflow: hidden
+              justify-content: space-around
               .product-tab-item
                 display: flex
                 flex: 1
                 color: #979799
                 font-weight: 500
                 height: .5rem
+                width: 1.5rem
                 line-height: .5rem
                 border-radius: .3rem
                 position: relative
+                transform: translateY(100%)
+                cursor: pointer
+                &:hover
+                  background: rgba(49,49 ,49 ,.2 )
+                &:nth-of-type(1)
+                  animation: product-tab-item  .2s    forwards
+                 
+                &:nth-of-type(2)
+                  animation: product-tab-item  .2s  .2s forwards
+                 
+                &:nth-of-type(3)
+                  animation: product-tab-item  .2s  .4s forwards
+               
+                &:nth-of-type(4)
+                  animation: product-tab-item  .2s  .8s forwards
+                &:nth-of-type(5)
+                  animation: product-tab-item  .2s  1s forwards
+                 
                 .tab-item-left
                   width: .35rem
                   height: .35rem
@@ -277,16 +362,16 @@ export default {
             .commodity-box
                 font-size: .16rem
                 display: flex
-                margin-top: .54rem
+                margin-top: .14rem
                 width: 100%
                 height: 4.4rem
                 
                 .news-enter-active,.news-leave-active
-                  transition: 0.5s  linear
+                  transition: 0.2s  linear
                 .news-leave-to,.news-enter
                   transform: translateX(-100%)
                 .out-enter-active,.out-leave-active
-                  transition: 0.5s  linear
+                  transition: 0.2s  linear
                 .out-enter,.out-leave-to
                   transform: translateX(100%)
 
@@ -297,35 +382,44 @@ export default {
                   .commodity-box-item
                     width: 3.14rem
                     height: 4.6rem
-                    border-radius: .20rem
-                    overflow: hidden
-                    background: rgba(255,255 ,255 ,.1 )
+                    cursor: pointer
                     &.enter
                       opacity: 0
+                      
                       &:nth-of-type(1)
-                        transition: opacity .5s
+                        transition: opacity .2s
                       &:nth-of-type(2)
-                        transition: opacity 1s 
-                        transition-delay: .5s
+                        transition: opacity .2s 
+                        transition-delay: .2s
                       &:nth-of-type(3)
-                        transition: opacity 1.5s
-                        transition-delay:  1s
+                        transition: opacity .2s
+                        transition-delay:  .4s
                       &:nth-of-type(4)
-                        transition: opacity 2s
-                        transition-delay: 1.5s
+                        transition: opacity .2s
+                        transition-delay:   .6s
                     &.out
                       opacity: 1
                       &:nth-of-type(4)
-                        transition: opacity  .5s
+                        transition: opacity  .2s
                       &:nth-of-type(3)
-                        transition: opacity 1s 
-                        transition-delay: .5s
+                        transition: opacity .2s 
+                        transition-delay: .2s
                       &:nth-of-type(2)
-                        transition: opacity 1.5s
-                        transition-delay:  1s
+                        transition: opacity .2s
+                        transition-delay:  .4s
                       &:nth-of-type(1)
-                        transition: opacity 2s
-                        transition-delay: 1.5s
+                        transition: opacity .2s
+                        transition-delay: .6s
+                    .box-item-max
+                      width: 100%
+                      height: 100%
+                      border-radius: .20rem
+                      overflow: hidden
+                      background: rgba(255,255 ,255 ,.1 )
+                      transform: scale(.9)
+                      &:hover
+                        transform: scale(1)
+                        transition: .3s linear
                     .box-item-title
                       font-weight: 700
                       color: #dec395
@@ -372,7 +466,21 @@ export default {
                     &:nth-of-type(4)
                       .box-item-img
                         background: rgba(67,114 ,108 ,.5 )
-                      
+@keyframes product-title 
+    0%
+      transform: translateX(-100%)
+    100%
+      transform: translateX(0%)
+@keyframes product-tab-item 
+    0%
+      transform: translateY(100%)
+
+    100%
+      transform: translateY(0%)
+
+  
+  
+         
                      
                      
                       
