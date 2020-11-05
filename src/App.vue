@@ -1,14 +1,22 @@
 <template lang="pug">
   .app
-    .nav
-      router-link(to="/") Home|
-      router-link(to="/compony") Compony|
-      router-link(to="/product") Product|
-      router-link(to="/journalism") Journalism|
-      router-link(to="/user") User
-    router-view
+    my-header
+    keep-alive
+      router-view
 </template>
 
-<style lang="stylus">
+<script>
+  import MyHeader from '@/common/Header'
+  export default {
+    components: {
+      MyHeader
+    }
+  }
+</script>
 
+<style lang="sass">
+.app
+  position: relative
+  min-height: 100%
+  font-size: 16px
 </style>

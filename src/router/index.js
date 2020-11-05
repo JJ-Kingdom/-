@@ -6,12 +6,15 @@ import Product from '../views/Product.vue'
 import Journalism from '../views/Journalism.vue'
 import User from '../views/User.vue'
 
-
-
 Vue.use(VueRouter)
 
-const routes = [{
+const routes = [
+    {
         path: '/',
+        redirect: '/home'
+    },
+    {
+        path: '/home',
         name: 'Home',
         component: Home
     },
