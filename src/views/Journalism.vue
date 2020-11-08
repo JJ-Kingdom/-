@@ -3,23 +3,22 @@
     .model
       template(v-if='$route.meta.show')
         el-breadcrumb(separator-class="el-icon-arrow-right" class='title')
-          el-breadcrumb-item 首页
-          el-breadcrumb-item(:to="{path:'/journalism'}") 新闻资讯
+          el-breadcrumb-item {{$t('cn.indexPage')}}
+          el-breadcrumb-item(:to="{path:'/journalism'}") {{$t('cn.subPage')}}
         p.title_sub(class='animate__animated animate__fadeInLeft') NEWS AND INFOORMATION
-        p.content_title(class='animate__animated animate__fadeInRight') 新闻资讯
-        .content
+        p.content_title(class='animate__animated animate__fadeInRight') {{$t('cn.subPage')}}
+        .content_jour
           .left
-            .one
               .content_a(class='animate__animated animate__fadeInLeft')
                 .img(class='animate__animated animate__fadeIn')
                 .info
-                  router-link(class='animate__animated animate__fadeInDown hover' tag='p' to='/journalism/journalismDetail' @click='$route.meta.show = false') 煊赫集团发布2019年度社会责任报告...
-                  p(class='animate__animated animate__fadeInUp') 6月31日，公司以"专注，用心，服务"为核心价值，为广大消费者提供优质的服务。
+                  router-link(class='animate__animated animate__fadeInDown hover' tag='p' to='/journalism/journalismDetail' @click='$route.meta.show = false') {{$t('cn.modulLeftTile')}}
+                  p(class='animate__animated animate__fadeInUp') {{$t('cn.moduLeftContent')}}
               .content_b(class='animate__animated animate__fadeInLeft')
                 .img2(class='animate__animated animate__fadeIn')
                 .info
-                  p(class='animate__animated animate__fadeInDown hover') 煊赫集团参加2019中国国际进口博览会...
-                  p(class='animate__animated animate__fadeInUp') 多年来，北京煊赫电子商务有限公司一直秉承以用户需求为核心，提供周到的服务，赢得了消费者的信赖和好评。
+                  p(class='animate__animated animate__fadeInDown hover') {{$t('cn.moduLeftTile2')}}
+                  p(class='animate__animated animate__fadeInUp') {{$t('cn.moduLeftContent2')}}
 
           .line(class='animate__animated animate__fadeIn')
             span(class='animate__animated animate__fadeInUpBig')
@@ -33,27 +32,34 @@
           .right
             .content_c(class='animate__animated animate__fadeInRight hover')
               .info
-                p(class='animate__animated animate__fadeInDown') 煊赫召开"不忘初心，牢记使命"主题动员...
-                p(class='animate__animated animate__fadeInUp') 我们公司不仅仅提供专业细致的服务，同时还建立了完善的售后服务体系。
+                p(class='animate__animated animate__fadeInDown') {{$t('cn.modulRightTile')}}
+                p(class='animate__animated animate__fadeInUp') {{$t('cn.modulRightContent')}}
               .img3(class='animate__animated animate__fadeIn')
             .content_d(class='animate__animated animate__fadeInRight')
               .info
-                p(lass='animate__animated animate__fadeInDown') 首月销售红火多渠道营销带来业绩大会...
-                p(lass='animate__animated animate__fadeInUp') 用心打交道，全心全意服务客户，公司业务得到持续高速发展，也为员工提供了极大的发展空间。
+                p(class='animate__animated animate__fadeInDown') {{$t('cn.modulRightTile2')}}
+                p(class='animate__animated animate__fadeInUp') {{$t('cn.modulRightContent2')}}
               .img4(class='animate__animated animate__fadeIn')
+        ul.page
+          li {{$t('cn.bottomIndex')}}
+          li {{$t('cn.bottomPrev')}}
+          li {{$t('cn.bottomCurrent')}}
+          li {{$t('cn.bottomNext')}}
+          li {{$t('cn.bottomEnd')}}
       router-view(v-else)
+      
 </template>
 
 <script>
-export default { }
+export default { 
+}
 </script>
 
 <style lang="sass">
   .journalism
-      width: 100vw
       height: 100vh
       background: url(~@/assets/image/bg.png) no-repeat
-      background-position: -62px 0
+      background-position: -6vw 0
       overflow: hidden
       .model
         width: 90vw
@@ -64,8 +70,8 @@ export default { }
           width: 85vw
           font-size: 0.2rem
           font-weight: 700
-          padding-top: 1.3rem
           margin-left: 2rem
+          padding-top: 3vh
           margin-bottom: .1rem
           .el-breadcrumb__inner
             color: #fff
@@ -82,197 +88,252 @@ export default { }
           text-align: center
           color: #cdb990
           animation-delay: .7s
-        .content
+          margin-top: 1%
+        .content_jour
           width: 90vw
-          height: 8.5rem
-          margin: 0 auto
+          height: 65vh
           display: flex
+          justify-content: space-around
           .left
             width: 50%
-            height: 100%
-            margin-top: .1rem
+            height: 80%
             align-self: flex-start
-            .one
-              width: 100%
-              .content_a
-                width: 6rem
-                height: 2.5rem
-                background: #525572
-                opacity: .9
-                border-radius: .5rem
-                animation-delay: 2.5s
-                margin: .7rem 0 0 1.2rem 
-                display: flex
-                .img
-                  width: 2rem
-                  height: 1.8rem
-                  background: url(~@/assets/image/left-1.png)
-                  border-radius: .4rem
-                  animation-delay: 3.2s
-                  margin-left: -1rem
-                  margin-top: .35rem
-                  background-position: -.4rem -.2rem
-                .info
-                  width: 4.9rem
-                  p
-                    &:nth-child(1)
-                      font-size: .25rem
-                      font-weight: 700
-                      margin: .6rem 0 0 .2rem
-                    &:hover
-                      color: #cdb990
-                    &:nth-child(2)
-                      font-size: .23rem
-                      margin: .2rem 0 0 .2rem
-              .content_b
-                width: 6rem
-                height: 2.5rem
-                background: #3c1a36
-                opacity: .9
-                border-radius: .5rem
-                animation-delay: 2.5s
-                display: flex
-                margin: 1.7rem 0 0 1.2rem 
-                .img2
-                  width: 2rem
-                  height: 1.8rem
-                  background: url(~@/assets/image/left-2.png)
-                  border-radius: .4rem
-                  animation-delay: 3.2s
-                  margin-left: -1rem
-                  margin-top: .35rem
-                  background-position: -.4rem -.2rem
-                .info
-                  width: 4.9rem
-                  p
-                    &:nth-child(1)
-                      font-size: .25rem
-                      font-weight: 700
-                      margin: .6rem 0 0 .2rem
-                    &:nth-child(2)
-                      font-size: .23rem
-                      margin: .2rem 0 0 .2rem
+            .content_a
+              width: 31vw
+              background: #525572
+              opacity: .9
+              border-radius: .4rem
+              animation-delay: 2.5s
+              margin: .1rem 0 0 1.2rem 
+              display: flex
+              align-items: center
+              padding: 1vw 0
+              .img
+                width: 10vw
+                height: 12vh
+                background: url(~@/assets/image/left-1.png) no-repeat
+                background-size: 100% 100%
+                border-radius: 20%
+                animation-delay: 3.2s
+                margin-left: -5vw
+              .info
+                width: 24vw
+                p
+                  &:nth-child(1)
+                    font-size: .25rem
+                    font-weight: 700
+                    padding-left: 6% 
+                    animation-delay: 3s
+                  &:hover
+                    color: #cdb990
+                  &:nth-child(2)
+                    font-size: .23rem
+                    padding-left: 6%
+                    padding-top: 3%
+                    animation-delay: 3s
+            .content_b
+              width: 31vw
+              background: #3c1a36
+              opacity: .9
+              border-radius: .5rem
+              animation-delay: 2.7s
+              display: flex
+              align-items: center
+              margin: 1.7rem 0 0 1.2rem
+              padding: 1vw 0
+              .img2
+                width: 10vw
+                height: 12vh
+                background: url(~@/assets/image/left-2.png) no-repeat
+                background-size: 100% 100%
+                border-radius: 20%
+                animation-delay: 3.2s
+                margin-left: -5vw
+              .info
+                width: 26vw
+                p
+                  &:nth-child(1)
+                    font-size: .25rem
+                    font-weight: 700
+                    padding-left: 6% 
+                    animation-delay: 3s
+                  &:nth-child(2)
+                    font-size: .23rem
+                    padding-left: 6% 
+                    padding-top: 3% 
+                    animation-delay: 3s
           .line
-            width: .01rem
-            height: 8rem
+            width: .1vw
+            height: 55vh
             background: rgba(255, 255, 255, .2)
-            margin: 0 auto
             display: flex
+            align-items: center
             flex-direction: column
             position: relative
-            align-self: center
+            justify-content: space-around
             animation-delay: .5s
+            margin-top: 2%
             span
-              width: .2rem
-              height: .2rem
+              width: 1vw
+              height: 1.3vh
               border-radius: 50%
               background: #9d9899
-              margin-left: -.1rem 
               position: relative
               h5
                 font-size: .2rem
                 position: absolute
               &:nth-child(1) h5
-                left: -1.2rem
-                top: -.05rem
+                left: -6vw
+                top: -.2vh
               &:nth-child(2) h5
-                left: .4rem
-                top: -.02rem
+                left: 1.7vw
+                top: -.2vh
               &:nth-child(3) h5
-                left: -1.2rem
-                top: -.05rem
+                left: -6vw
+                top: -.2vh
               &:nth-child(4) h5
-                left: .4rem
-                top: -.02rem
+                left: 1.7vw
+                top: -.2vh
               &:nth-child(1)
                 animation-duration: 2s
                 animation-delay: .8s
-                margin-top: 1rem
               &:nth-child(2)
                 animation-duration: 2s
                 animation-delay: 1s
-                margin-top: 2rem
               &:nth-child(3)
                 animation-duration: 2s
                 animation-delay: 1.2s
-                margin-top: 2rem
               &:nth-child(4)
                 animation-duration: 2s
                 animation-delay: 1.4s
-                margin-top: 2rem
           .right
             width: 45vw
-            height: 100%
-            align-self: flex-end
+            height: 80%
             .content_c
-              width: 6rem
-              height: 2.5rem
+              width: 31vw
+              padding: 1vw 0
               background: #3d644f
               opacity: .6
               border-radius: .5rem
-              animation-delay: 2.5s
+              animation-delay: 2.9s
               display: flex
-              margin: 1.5rem 0 0 1.6rem
+              align-items: center
+              margin: 1rem 0 0 1.6rem
               .img3
-                width: 2rem
-                height: 1.8rem
-                background: url(~@/assets/image/right-1.png)
-                border-radius: .4rem
-                z-index: 99
+                width: 10vw
+                height: 12vh
+                background: url(~@/assets/image/right-1.png) no-repeat
+                background-size: 100% 100%
+                border-radius: 20%
                 animation-delay: 3.2s
-                margin-top: .35rem
-                margin-right: -1rem
-                background-position: -.8rem -.2rem
+                margin-right: -10vw
             .content_d
-              width: 6rem
-              height: 2.5rem
+              width: 31vw
+              padding: 1vw 0
               background: #664b21
               opacity: .9
               border-radius: .5rem
-              animation-delay: 2.5s
+              animation-delay: 3.1s
               display: flex
-              margin: 1.5rem 0 0 1.6rem
+              align-items: center
+              margin: 2rem 0 0 1.6rem
               .img4
-                width: 2rem
-                height: 1.8rem
-                background: url(~@/assets/image/right-2.png)
-                border-radius: .4rem
+                width: 10vw
+                height: 12vh
+                background: url(~@/assets/image/right-2.png) no-repeat
+                background-size: 100% 100%
+                border-radius: 20%
                 animation-delay: 3.2s
-                margin-top: .35rem
-                margin-right: -1rem
-                background-position: -1.2rem -.2rem
+                margin-right: -10vw
             .info
-                  width: 4.9rem
+                  width: 25vw
                   p
                     &:nth-child(1)
                       font-size: .23rem
                       font-weight: 700
-                      margin: .6rem 0 0 .2rem
+                      padding-left: 6%
+                      animation-delay: 3s
                     &:nth-child(2)
                       font-size: .23rem
-                      margin: .2rem 0 0 .2rem
+                      padding-left: 6%
+                      padding-top: 3%
+                      animation-delay: 3s
         .page 
-          width: 100%
           font-size: .2rem
           display: flex
-          width: 4rem
-          margin: 0 auto
-          margin-top: .6rem
-          justify-content: space-around
+          justify-content: center
           li
-            width: 1rem
-            height: .5rem
             border: 1px solid rgba(255, 255, 255, .4)
-            margin-left: .1rem
-            line-height: .5rem
+            margin-left: 1vw
+            align-self: start
             text-align: center
+            line-height: 2vh
+            padding: 5px
             &:nth-child(3)
               background: #fff
               color: #333
-.slide-enter-active, .slide-leave-active
-  transition: all .3s ease-in-out
-
-.slide-enter, .slide-leave-to
-  transform: translate3d(100%, 0, 0)
+              padding: 5px 10px
+@media screen  and (max-width: 1200px)
+   .line
+     display: none !important
+   .content_jour
+     width: 90vw !important
+     flex-direction: column
+     .left
+       width: 80vw !important
+       display: flex
+       flex-direction: column
+       align-items: center
+       margin: 0 auto
+       .content_a
+         width: 80vw !important
+         margin: 0 0 !important
+         margin-top: 5% !important
+         padding: 2% 2% !important
+         .info 
+           width: 80vw !important
+         .img
+           width: 15vw !important
+           margin: 0 !important
+       .content_b
+         width: 80vw !important
+         margin: 0 0 !important
+         margin-top: 0 !important
+         margin-top: 1% !important
+         padding: 2% 2% !important
+         .info 
+           width: 80vw !important
+         .img2
+           width: 15vw !important
+           margin: 0 !important
+     .right
+       width: 80vw !important
+       display: flex
+       flex-direction: column
+       align-items: center
+       margin: 0 auto
+       .content_c
+         width: 80vw !important
+         margin: 0 0 !important
+         margin-top: 0 !important
+         margin-top: 1% !important
+         padding: 2% 2% !important
+         .info 
+           width: 80vw !important
+         .img3
+           width: 15vw !important
+           margin: 0 !important
+       .content_d
+          width: 80vw !important
+          margin: 0 0 !important
+          margin-top: 0 !important
+          margin-top: 1% !important
+          padding: 2% 2% !important
+          .info 
+            width: 80vw !important
+          .img4
+            width: 15vw !important
+            margin: 0 !important
+   .page
+     margin-top: 5% !important
 </style>
-
