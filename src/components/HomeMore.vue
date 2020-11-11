@@ -25,7 +25,7 @@
     height: 0.43rem
     line-height: 0.43rem
     border-radius: 0.04rem
-    border: solid 0.01rem #dbbc88
+    border: solid 1px #dbbc88
     color: white
     .text
       transition: all 300ms
@@ -36,6 +36,7 @@
       height: 0.33rem
       letter-spacing: 0.02rem
       font-size: 0.15rem
+      white-space: nowrap
       .arrow
         animation: homeMore 700ms alternate infinite linear
         animation-play-state: paused
@@ -51,7 +52,7 @@
       width: 100%
       height: 100%
       border-radius: 0.04rem
-      border: solid 0.01rem #dbbc88
+      border: solid 1px #dbbc88
     &:hover
       .text
         background-color: rgba(219, 188, 136, 0.3)

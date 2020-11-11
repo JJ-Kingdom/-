@@ -1,12 +1,12 @@
 <template lang="pug">
   .mini-swiper-container( v-on="{ mouseover: swiperOver, mouseout: swiperOut }" )
     swiper.mini-swiper-wrap( :options="swiperOptions" ref="miniSwiper" v-if="show" )
-      swiper-slide.mini-slide( v-for="(v, i) in swiperData" :key="v.id" )
+      swiper-slide.mini-slide( v-for="(v, i) in miniSwiperData" :key="v.id" )
         .cover( :style="{ backgroundImage: 'url('+ v.cover +')' }" class="ani mini" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="0" )
         .name( class="ani mini" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.2s" swiper-animate-delay="0.2s" ) {{ v.name }}
         .description( class="ani mini" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.2s" swiper-animate-delay="0.4s" ) {{ v.description }}
         .view-detail( @click="$router.push(v.path)" tag="div" class="ani mini" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="1s" ) 查看详情
-    .mini-mask( v-for="(v, i) in swiperData" :class="[v.miniMaskCls, { active: miniCurrentIndex === i }]" )
+    .mini-mask( v-for="(v, i) in miniSwiperData" :class="[v.miniMaskCls, { active: miniCurrentIndex === i }]" )
     .swiper-pagintion
 </template>
 
@@ -40,38 +40,7 @@
           }
         },
         swiperData: [
-          {
-            id: 1,
-            path: '/product/1/1',
-            name: '健康检测智能手环',
-            description: '有了它就可以随时随地测量心电、血压趋势、心率等数据，预防心血管疾病的突发风险。',
-            cover: require('@/assets/image/home/mini-swiper-1.png'),
-            miniMaskCls: 'mini-1'
-          },
-          {
-            id: 2,
-            path: '/product/2/1',
-            name: '健康检测智能手环',
-            description: '有了它就可以随时随地测量心电、血压趋势、心率等数据，预防心血管疾病的突发风险。',
-            cover: require('@/assets/image/home/mini-swiper-1.png'),
-            miniMaskCls: 'mini-2'
-          },
-          {
-            id: 3,
-            path: '/product/3/1',
-            name: '健康检测智能手环',
-            description: '有了它就可以随时随地测量心电、血压趋势、心率等数据，预防心血管疾病的突发风险。',
-            cover: require('@/assets/image/home/mini-swiper-1.png'),
-            miniMaskCls: 'mini-3'
-          },
-          {
-            id: 4,
-            path: '/product/4/1',
-            name: '健康检测智能手环',
-            description: '有了它就可以随时随地测量心电、血压趋势、心率等数据，预防心血管疾病的突发风险。',
-            cover: require('@/assets/image/home/mini-swiper-1.png'),
-            miniMaskCls: 'mini-4'
-          }
+          
         ],
         swiperTime: null,
         autoplay: false,
@@ -102,6 +71,11 @@
       },
       clearSwiperTime () {
         this.timer && clearInterval(this.timer)
+      }
+    },
+    computed: {
+      miniSwiperData () {
+        return this.$i18n.messages[this.$i18n.locale || 'ch'].home.miniSlide
       }
     },
     watch: {
@@ -138,7 +112,7 @@
       .mini-slide
         .cover
           width: 2.41rem
-          height: 2.82rem
+          min-height: 2.82rem
           margin: 0.46rem auto 0 auto
           background-size: 100% 100%
           background-image: url('~@/assets/image/home/mini-swiper-1.png')
@@ -148,7 +122,7 @@
           font-size: 0.25rem
           color: #e5c998
         .description
-          line-height: 0.18rem
+          line-height: 1.3
           margin-top: 0.14rem
           font-size: 0.13rem
           color: rgba(255, 255, 255, 0.6)
@@ -156,7 +130,7 @@
           width: 1.23rem
           height: 0.37rem
           line-height: 0.37rem
-          margin: 0.2rem auto 0 auto
+          margin: 0.2rem auto 0.2rem auto
           border: 0.01rem solid white
           border-radius: 0.18rem
           font-size: 0.18rem
@@ -164,6 +138,7 @@
           letter-spacing: 0.02rem
           color: white
           cursor: pointer
+          white-space: nowrap
           &:hover
            background-color: rgba(255, 255, 255, 0.2) 
         .name,

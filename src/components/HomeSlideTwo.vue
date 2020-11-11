@@ -3,21 +3,21 @@
     .left
       .backdrop( class="ani alias" swiper-animate-effect="slideInUp" swiper-animate-duration="1s" swiper-animate-delay="0" )
         .text-1
-          .text( class="ani alias" swiper-animate-effect="fadeInUpBig" swiper-animate-duration="1s" swiper-animate-delay="0" ) GO FURTHER
+          .text( class="ani alias" swiper-animate-effect="fadeInUpBig" swiper-animate-duration="1s" swiper-animate-delay="0" ) {{ $t( "home.slides[1].text_1" ) }}
           .line( class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s" )
         .text-2
           .icon-iphone( class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.8s" )
-          .text( class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1.2s" ) 135-6829-1328
+          .text( class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1.2s" ) {{ $t( "home.slides[1].text_2" ) }}
       .focus( class="ani alias" swiper-animate-effect="fadeInUpBig" swiper-animate-duration="1s" swiper-animate-delay="0.6s" )
     .right
       .about
         .title-1
-          p( class="ani alias" swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1s" swiper-animate-delay="0" ) ABOUT
-          p( class="ani alias" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.4s" ) US
-        .title-2( class="ani alias" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.4s" ) 关于我们
-        .title-3( class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.8s" ) 煊赫电子商务有限公司
-        .title-4( class="ani alias" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.6s" ) 施运营和管理，支持深化“轨道+物业”发展模式
-        .text( class="ani alias" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2s" ) 始终坚持为普通人提供好产品、好服务，通过自身努力，为满人民对美好生活的各方面需求，做出力所能及的贡献。2018年，公司将自身定位进一步迭代升级为“城乡建设与生活服务商”，所搭建的生态体系已初具规模。
+          p( class="ani alias" swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1s" swiper-animate-delay="0" ) {{ $t( "home.slides[1].text_3" ) }}
+          p( class="ani alias" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.4s" ) {{ $t( "home.slides[1].text_4" ) }}
+        .title-2( class="ani alias" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.4s" ) {{ $t( "home.slides[1].text_5" ) }}
+        .title-3( class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.8s" ) {{ $t( "home.slides[1].text_6" ) }}
+        .title-4( class="ani alias" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.6s" ) {{ $t( "home.slides[1].text_7" ) }}
+        .text( class="ani alias" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2s" ) {{ $t( "home.slides[1].text_8" ) }}
       home-more.more( path="/compony" class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="2.4s" )
 </template>
 
@@ -45,9 +45,12 @@
         background-size: 100% 100%
         background-image: url('~@/assets/image/home/slide-2-1.png')
         .text-1
+          position: absolute
+          top: 0.40rem
+          left: 0.40rem
           display: flex
           align-items: center
-          transform: translate(0.37rem, 0.37rem) rotate(90deg)
+          transform: rotate(90deg)
           transform-origin: top left
           color: #ead4a2
           letter-spacing: 0.02rem
@@ -97,28 +100,30 @@
           font-size: 0.3rem
           color: white
         .title-3
-          line-height: 0.57rem
+          line-height: 0.60rem
           letter-spacing: 0.02rem
           font-size: 0.16rem
           font-weight: bolder
           color: #dbbc88
+          white-space: nowrap
           &:before
            content: ''
            display: inline-block
            width: 0.52rem
-           height: 0.02rem
+           height: 1px
            margin: 0 0.04rem
            vertical-align: middle
            background-color: #dbbc88
         .title-4
-          line-height: 0.57rem
+          line-height: 1.5
           letter-spacing: 0.02rem
           color: white
           font-size: 0.14rem
         .text
-          line-height: 1.4
+          padding-top: 0.25rem
+          line-height: 1.5
           font-size: 0.14rem
           color: rgba(255, 255, 255, 0.5)
       .more
-        margin-top: 1.39rem
+        margin-top: 0.8rem
 </style>

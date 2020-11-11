@@ -1,6 +1,6 @@
 <template lang="pug">
   .home
-    home-left
+    home-left.left
     .home-middle
       swiper.swiper-container( :options="swiperOptions" ref="swiper" :notNextTick="true" )
         swiper-slide.slide
@@ -17,10 +17,13 @@
         swiper-slide.slide
           .mask( class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0")
           .content
+            home-slide-four
         swiper-slide.slide
           .mask( class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0")
+          .slide-4-mask( class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="0.5s")
           .content
-    home-right( :current-index="currentIndex" @swiper-prev="swiperPrev" @swiper-next="swiperNext" @swiper-to="swiperTo" )
+            home-slide-five
+    home-right.right( :current-index="currentIndex" @swiper-prev="swiperPrev" @swiper-next="swiperNext" @swiper-to="swiperTo" )
 </template>
 
 <script>
@@ -35,6 +38,8 @@
   import HomeSlideOne from '@/components/HomeSlideOne'
   import HomeSlideTwo from '@/components/HomeSlideTwo'
   import HomeSlideThree from '@/components/HomeSlideThree'
+  import HomeSlideFour from '@/components/HomeSlideFour'
+  import HomeSlideFive from '@/components/HomeSlideFive'
 
   export default {
     name: 'home',
@@ -103,7 +108,9 @@
       HomeRight,
       HomeSlideOne,
       HomeSlideTwo,
-      HomeSlideThree
+      HomeSlideThree,
+      HomeSlideFour,
+      HomeSlideFive
     },
     activated () {
       /**
@@ -188,7 +195,18 @@
               bottom: 0
               z-index: 1
               background-size: 100vw 100vh
-              filter: blur(5px)
+              filter: blur(2px)
+          .slide-4-mask
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            z-index: 100
+            margin: auto
+            width: 16.36rem
+            height: 9.15rem
+            background: url('~@/assets/image/home/slide-5-3.png') 00/100% 100%
           .content
             overflow: hidden
             display: flex
@@ -213,4 +231,9 @@
           .swiper-slide
             .content
               height: calc(100% - 70px)
+  @media screen and (max-width: 768px)
+    .home
+      .home-left,
+      .home-right
+        display: none
 </style>

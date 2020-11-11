@@ -1,8 +1,8 @@
 <template lang="pug">
   .slide-1
-    .text-1( class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="0.5s" ) 超越时代前沿 越过未来创新
-    .text-2( class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="0.8s" swiper-animate-delay="1.8s" ) Rapid development of the compan
-    .text-3( class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="0.5s" ) 煊赫电子商务有限公司
+    .text-1( class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="0.5s" ) {{ $t( "home.slides[0].text_1" ) }}
+    .text-2( class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="0.8s" swiper-animate-delay="1.8s" ) {{ $t( "home.slides[0].text_2" ) }}
+    .text-3( class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="0.5s" ) {{ $t( "home.slides[0].text_3" ) }}
 </template>
 
 <script>
@@ -11,12 +11,10 @@
 
 <style lang="sass">
   .slide-1
-    width: 9.93rem
-    height: 1.94rem
+    padding: 0 2rem
     color: white
     .text-1
       letter-spacing: 0.04rem
-      white-space: nowrap
       font-size: 0.76rem
       font-family: 'HYHeiFang', sans-serif
       background-image: -webkit-linear-gradient(bottom, #d2ccd6, #e9e6eb, #ffffff, #f6f6f6)

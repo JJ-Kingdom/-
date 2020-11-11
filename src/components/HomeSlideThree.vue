@@ -3,13 +3,13 @@
     .left
       .header
         .title-1
-          span.text( class="ani alias" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0" ) 产品中心
-        .title-2( class="ani alias" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0" ) PRODUCT CENTER
+          span.text( class="ani alias" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0" ) {{ $t( "home.slides[2].text_1" ) }}
+        .title-2( class="ani alias" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0" ) {{ $t( "home.slides[2].text_2" ) }}
       .search-wrap( class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.7s" )
-        input.ipt( placeholder="搜索你需要的产品名称或相关词" )
+        input.ipt( :placeholder="$t('home.slides[2].text_3')" )
         .icon-search
       .classify
-        .title( class="ani alias" swiper-animate-effect="fadeInUpBig" swiper-animate-duration="0.7s" swiper-animate-delay="0.4s" ) 产品分类
+        .title( class="ani alias" swiper-animate-effect="fadeInUpBig" swiper-animate-duration="0.7s" swiper-animate-delay="0.4s" ) {{ $t( "home.slides[2].text_4" ) }}
         .classify-grop
           router-link.item( to="/product/1" tag="div" id="test" class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="0.4s" swiper-animate-delay="1.3s")
           router-link.item( to="/product/2" tag="div" id="test" class="ani alias" swiper-animate-effect="fadeIn" swiper-animate-duration="0.4s" swiper-animate-delay="1.7s")
@@ -120,7 +120,7 @@
       right: 0
       bottom: 0
       width: 4.8rem
-      height: 5.53rem
+      min-height: 5.53rem
     .more
       position: absolute
       top: 6rem
