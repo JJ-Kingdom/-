@@ -2,12 +2,16 @@
   .product
         .product-box-background
           .product-box
+            p(style='font-size:.2rem;position:fixed;right:5%;top:5%;')
+              span(@click="cn")  cn
+              span /
+              span(@click="en") en
             .product-box-top
-              router-link(to="/")  首页 
+              router-link(to="/")  {{$t('Product.index')}} 
               span  >
-              router-link(to="/product")  全部产品 
+              router-link(to="/product/0")  {{$t('Product.all')}} 
             h2.title PRODUCT CENTER
-            h2.cnproduct 产品中心
+            h2.cnproduct {{$t('Product.cnproduct')}} 
             .product-body
               .product-body-tab-box
                 .product-tab-item(v-for='(item,indexs) in ProductArr' :key="indexs" :class='indexs==tabindex?"active":""' @click="tabindex=indexs")
@@ -24,12 +28,12 @@
                         .box-item-title {{item.title}}
                         .box-item-cont {{item.cont}}
                         .box-item-more 
-                          .text 查看更多
+                          .text {{$t('Product.text')}} 
              
-              el-pagination(background layout="prev, pager, next" :disabled="disabled" :total="PaginationLength" :page-size='4' @current-change="total"  :current-page.sync="page" prev-text="上一页" next-text="下一页" :layout="'prev, pager, next,slot'" )
+              el-pagination(background layout="prev, pager, next" :disabled="disabled" :total="PaginationLength" :page-size='4' @current-change="total"  :current-page.sync="page" :prev-text="$t('Product.up')" :next-text="$t('Product.drow')" :layout="'prev, pager, next,slot'" )
                 slot
-                  .index(@click="page=1") 首页
-                  .unindex(@click="page=PaginationLength/4") 末页
+                  .index(@click="page=1") {{$t('Product.index')}} 
+                  .unindex(@click="page=PaginationLength/4") {{$t('Product.unindex')}} 
 
                
 
@@ -40,6 +44,7 @@
 </template>
 
 <script>
+import  i18n from '@/i18n/Product/index.js'
 
 export default {
   data() {
@@ -84,6 +89,13 @@ export default {
  
   },
   methods: {
+    cn(){
+i18n.locale='cn'
+    },
+    en(){
+   i18n.locale='en'
+
+    },
    total(e){
      console.log(this.page,e)
       let num=(this.page-1)*4
@@ -308,23 +320,18 @@ export default {
                 border-radius: .3rem
                 position: relative
                 transform: translateY(100%)
-                cursor: pointer
                 &:hover
                   background: rgba(49,49 ,49 ,.2 )
                 &:nth-of-type(1)
                   animation: product-tab-item  .2s    forwards
-                 
                 &:nth-of-type(2)
                   animation: product-tab-item  .2s  .2s forwards
-                 
                 &:nth-of-type(3)
                   animation: product-tab-item  .2s  .4s forwards
-               
                 &:nth-of-type(4)
                   animation: product-tab-item  .2s  .8s forwards
                 &:nth-of-type(5)
                   animation: product-tab-item  .2s  1s forwards
-                 
                 .tab-item-left
                   width: .35rem
                   height: .35rem
@@ -350,12 +357,10 @@ export default {
                 &.active
                   color: #e5c998
                   background: rgba(49,49 ,49 ,.4 )
-
                   .tab-item-left
                     border: .05rem solid rgba(228,200 ,152 ,.6 )
                     .item-left-box
                       background: #e5c998
-                        
                 .tab-item-right
                   box-sizing: border-box
                   padding-left: .55rem
@@ -365,7 +370,6 @@ export default {
                 margin-top: .14rem
                 width: 100%
                 height: 4.4rem
-                
                 .news-enter-active,.news-leave-active
                   transition: 0.2s  linear
                 .news-leave-to,.news-enter
@@ -374,7 +378,6 @@ export default {
                   transition: 0.2s  linear
                 .out-enter,.out-leave-to
                   transform: translateX(100%)
-
                 .commodity-box-items
                   display: flex
                   width: 100%
@@ -385,7 +388,6 @@ export default {
                     cursor: pointer
                     &.enter
                       opacity: 0
-                      
                       &:nth-of-type(1)
                         transition: opacity .2s
                       &:nth-of-type(2)
@@ -445,7 +447,6 @@ export default {
                       padding-left: 10%
                       .text
                         text-align: right
-
                     .box-item-img
                       width: 100%
                       height: 2.86rem
@@ -477,19 +478,31 @@ export default {
 
     100%
       transform: translateY(0%)
-
-  
-  
-         
-                     
-                     
-                      
-
-
-
-
-          
-     
-          
-
+@media screen and (max-width: 800px)
+  .commodity-box
+    height: 8.8rem !important
+    .commodity-box-items
+      flex-wrap: wrap
+      text-align: center
+      height: 100%
+      .commodity-box-item
+        width: 50% !important
+        .box-item-img
+          img
+            height: 60% !important
+            width: 60% !important
+        .box-item-cont
+          font-size: .25rem !important
+  .el-pagination
+    li
+      height: .6rem !important
+      line-height: .6rem !important
+    button
+      height: .6rem !important
+      line-height: .6rem !important
+    slot
+      div
+        height: .6rem !important
+        line-height: .6rem !important
+        top: 17% !important
 </style>

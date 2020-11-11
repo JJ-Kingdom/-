@@ -10,8 +10,10 @@ import 'element-ui/lib/theme-chalk/index.css'
 import 'animate.css'
 
 
-import axios from 'axios'
+   
 
+import axios from 'axios'
+import  i18n from '@/i18n/Product/index.js'
 Vue.prototype.$http = axios
 
 Vue.use(ElementUI)
@@ -23,5 +25,6 @@ Vue.config.productionTip = false
 new Vue({
     router,
     store,
+    i18n,
     render: h => h(App)
 }).$mount('#app')
