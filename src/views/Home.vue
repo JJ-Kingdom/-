@@ -47,36 +47,36 @@
       const that = this
       return {
         swiperOptions: {
-          // æ»‘åŠ¨é€Ÿåº¦
+          // »¬¶¯ËÙ¶È
           speed: 1000,
-          // æ»‘åŠ¨æ–¹å‘
+          // »¬¶¯·½Ïò
           direction: 'vertical',
-          // æ‹–åŠ¨çš„ä¸´ç•Œå€¼ï¼ˆå•ä½ä¸ºpxï¼‰ï¼Œå¦‚æžœè§¦æ‘¸è·ç¦»å°äºŽè¯¥å€¼æ»‘å—ä¸ä¼šè¢«æ‹–åŠ¨
+          // ÍÏ¶¯µÄÁÙ½çÖµ£¨µ¥Î»Îªpx£©£¬Èç¹û´¥Ãþ¾àÀëÐ¡ÓÚ¸ÃÖµ»¬¿é²»»á±»ÍÏ¶¯
           threshold: 20,
-          // è®¾ç½®ä¸ºfalseï¼Œæ‹–åŠ¨slideæ—¶å®ƒä¸ä¼šåŠ¨ï¼Œå½“ä½ é‡Šæ”¾æ—¶slideæ‰ä¼šåˆ‡æ¢
+          // ÉèÖÃÎªfalse£¬ÍÏ¶¯slideÊ±Ëü²»»á¶¯£¬µ±ÄãÊÍ·ÅÊ±slide²Å»áÇÐ»»
           followFinger: false,
-          // è®¾ç½®ä¸ºtrueæ—¶ï¼Œèƒ½ä½¿ç”¨é¼ æ ‡æ»šè½®æŽ§åˆ¶slideæ»‘åŠ¨
+          // ÉèÖÃÎªtrueÊ±£¬ÄÜÊ¹ÓÃÊó±ê¹öÂÖ¿ØÖÆslide»¬¶¯
           mousewheelControl: true,
           onInit (swiper) {
-            // éšè—åŠ¨ç”»å…ƒç´  
+            // Òþ²Ø¶¯»­ÔªËØ 
             swiperAnimateCache(swiper)
-            // å¼€å§‹åŠ¨ç”»
+            // ¿ªÊ¼¶¯»­
             swiperAnimate(swiper)
 
             /**
-             * é—®é¢˜ï¼šç¬¬ä¸€å±åŠ¨ç”»å®ŒæˆåŽä¸åˆ é™¤ç±»åçš„é—®é¢˜ï¼Œè¿™ä¼šå¯¼è‡´åŠ¨ç”»åœ¨å›žåˆ°ç¬¬ä¸€å±æ—¶ä¼šé‡å¤è¿‡æ¸¡çš„é—®é¢˜
-             * è§£å†³ï¼šåœ¨ Swiper åˆå§‹åŒ–åŽå¼€å§‹åŠ¨ç”»ï¼Œåœ¨åŠ¨ç”»å®Œæ¯•åŽåˆ é™¤ç±»åï¼Œç¡®ä¿åŠ¨ç”»åªè¿‡æ¸¡ä¸€æ¬¡
+             * ÎÊÌâ£ºµÚÒ»ÆÁ¶¯»­Íê³Éºó²»É¾³ýÀàÃûµÄÎÊÌâ£¬Õâ»áµ¼ÖÂ¶¯»­ÔÚ»Øµ½µÚÒ»ÆÁÊ±»áÖØ¸´¹ý¶ÉµÄÎÊÌâ
+             * ½â¾ö£ºÔÚ Swiper ³õÊ¼»¯ºó¿ªÊ¼¶¯»­£¬ÔÚ¶¯»­Íê±ÏºóÉ¾³ýÀàÃû£¬È·±£¶¯»­Ö»¹ý¶ÉÒ»´Î
              */
             swiper.slides.eq(swiper.activeIndex).find('.alias').removeClass('ani')
           },
           onSlideChangeStart (swiper) {
-            // æ›´æ–°ä¸‹æ ‡
+            // ¸üÐÂÏÂ±ê
             that.slideChangeEnd(swiper)
           },
           onTransitionEnd (swiper) {
-            // æ¯ä¸ªslideåˆ‡æ¢ç»“æŸæ—¶ä¹Ÿè¿è¡Œå½“å‰slideåŠ¨ç”»
+            // Ã¿¸öslideÇÐ»»½áÊøÊ±Ò²ÔËÐÐµ±Ç°slide¶¯»­
             swiperAnimate(swiper)
-            // åŠ¨ç”»åªå±•çŽ°ä¸€æ¬¡ï¼ŒåŽ»é™¤aniç±»å
+            // ¶¯»­Ö»Õ¹ÏÖÒ»´Î£¬È¥³ýaniÀàÃû
 
             swiper.slides.eq(swiper.activeIndex).find('.alias').removeClass('ani')
           }
@@ -91,15 +91,15 @@
         this.currentIndex = activeIndex + 1
       },
       swiperPrev () {
-        // åˆ‡æ¢è‡³ä¸Šä¸€å±
+        // ÇÐ»»ÖÁÉÏÒ»ÆÁ
         this.$refs.swiper && this.$refs.swiper.swiper.slidePrev()
       },
       swiperNext () {
-        // åˆ‡æ¢è‡³ä¸‹ä¸€å±
+        // ÇÐ»»ÖÁÏÂÒ»ÆÁ
         this.$refs.swiper && this.$refs.swiper.swiper.slideNext()
       },
       swiperTo (index) {
-        // åˆ‡æ¢è‡³æŒ‡å®šå±
+        // ÇÐ»»ÖÁÖ¸¶¨ÆÁ
         this.$refs.swiper && this.$refs.swiper.swiper.slideTo(index, 1000)
       }
     },
@@ -114,8 +114,8 @@
     },
     activated () {
       /**
-       * é—®é¢˜ï¼šç¼“å­˜çŠ¶æ€ä¸‹åœ¨æŸä¸€å±é“¾æŽ¥åˆ°å…¶å®ƒè·¯ç”±åŽè¿”å›žè¯¥å±ä¼šå‡ºçŽ°éƒ¨åˆ†åŠ¨ç”»å…ƒç´ æ˜¾ç¤ºä¸å¥å…¨çš„é—®é¢˜
-       * è§£å†³ï¼šåœ¨ activated é‡æ–°åˆå§‹åŠ¨ç”»å…ƒç´ ï¼Œå¹¶å¼€å§‹æ’­æ”¾åŠ¨ç”»ã€‚è®°å¾—è¦æ¸…é™¤ç±»åï¼Œå¦åˆ™è¿˜ä¼šå‡ºçŽ°éƒ¨ä»½åŠ¨ç”»å…ƒç´ æ˜¾ç¤ºä¸å¥å…¨æˆ–åŠ¨ç”»å®Œæ¯•åŽè‡ªåŠ¨æ¶ˆå¤±çš„é—®é¢˜
+       * ÎÊÌâ£º»º´æ×´Ì¬ÏÂÔÚÄ³Ò»ÆÁÁ´½Óµ½ÆäËüÂ·ÓÉºó·µ»Ø¸ÃÆÁ»á³öÏÖ²¿·Ö¶¯»­ÔªËØÏÔÊ¾²»½¡È«µÄÎÊÌâ
+       * ½â¾ö£ºÔÚ activated ÖØÐÂ³õÊ¼¶¯»­ÔªËØ£¬²¢¿ªÊ¼²¥·Å¶¯»­¡£¼ÇµÃÒªÇå³ýÀàÃû£¬·ñÔò»¹»á³öÏÖ²¿·Ý¶¯»­ÔªËØÏÔÊ¾²»½¡È«»ò¶¯»­Íê±Ïºó×Ô¶¯ÏûÊ§µÄÎÊÌâ
        */
       this.$nextTick(() => {
         swiperAnimateCache(this.$refs.swiper.swiper)
@@ -126,7 +126,7 @@
   }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
   .animate__delay-500ms
     animation-delay: 500ms
   .home
