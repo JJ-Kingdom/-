@@ -1,5 +1,5 @@
 <template lang="pug">
-	.home
+	.home_a
 		.rgbaBox
 			.topNav
 				el-breadcrumb(separator-class="el-icon-arrow-right")
@@ -32,7 +32,7 @@ export default {
 }
 </script>
 <style lang="sass">
-	.home
+	.home_a
 		width: 90vw
 		height: 100vh
 		margin: 0 auto
