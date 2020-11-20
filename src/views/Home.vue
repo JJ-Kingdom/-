@@ -1,10 +1,15 @@
 <template lang="pug">
-  .home home
+	.home
 </template>
 
 <script>
 
 export default {
-  
+	methods:{
+	
+	}
 }
 </script>
+<style lang="sass">
+	
+</style>
