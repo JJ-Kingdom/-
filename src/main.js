@@ -13,7 +13,7 @@ import 'animate.css'
    
 
 import axios from 'axios'
-import  i18n from '@/i18n/Product/index.js'
+import  i18n from '@/i18n/index.js'
 Vue.prototype.$http = axios
 
 Vue.use(ElementUI)

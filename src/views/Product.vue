@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import  i18n from '@/i18n/Product/index.js'
+import  i18n from '@/i18n/index.js'
 
 export default {
   data() {
@@ -90,10 +90,10 @@ export default {
   },
   methods: {
     cn(){
-i18n.locale='cn'
+i18n.locale='ch'
     },
     en(){
-   i18n.locale='en'
+   i18n.locale='eh'
 
     },
    total(e){
@@ -187,6 +187,7 @@ i18n.locale='cn'
     background-size: cover
     top: 0
     overflow: hidden
+    color: #fff
     &::before
       width: 100%
       height: 100%
