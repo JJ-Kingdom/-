@@ -61,6 +61,7 @@ export default {
       background: url(~@/assets/image/bg.png) no-repeat
       background-position: -6vw 0
       overflow: hidden
+      color: #fff
       .model
         width: 90vw
         height: 100vh
