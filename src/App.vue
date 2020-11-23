@@ -1,7 +1,6 @@
 <template lang="pug">
   .app
-    .nav
-      headerTop
+    headerTop
     router-view 
 </template>
 
@@ -17,3 +16,6 @@ export default {
   }
 }
 </script>
+
+<style lang="sass">
+</style>
