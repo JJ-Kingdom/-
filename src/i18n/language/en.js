@@ -103,7 +103,16 @@ const en = {
 	bottomPrev: 'previouspage',
 	bottomCurrent: 'first',
 	bottomNext: 'nextpage',
-	bottomEnd: 'Lastpage'
+	bottomEnd: 'Lastpage',
+  Product: {
+    all: 'All products',
+    text: 'More',
+    index: 'Home',
+    unindex:'Last',
+    cnproduct:"Product Center",
+    up:'up',
+    drow:"drow"
+  }
 }
 
 export default en

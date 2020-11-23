@@ -37,7 +37,7 @@
             enTitle: 'Company Profile',
           },
           {
-            path: '/product',
+            path: '/product/0',
             chTitle: '产品中心',
             enTitle: 'Product Center',
           },

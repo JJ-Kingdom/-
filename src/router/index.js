@@ -6,6 +6,7 @@ import Compony from '../views/Compony.vue'
 import Product from '../views/Product.vue'
 import Journalism from '../views/Journalism.vue'
 import User from '../views/User.vue'
+import ProductsItem from '@/common/products/ProductsItem.vue'
 import journalismDetail from '../components/journalismDetail/journalismDetail.vue'
 
 Vue.use(VueRouter)
@@ -26,9 +27,14 @@ const routes = [
         component: Compony
     },
     {
-        path: '/product',
+        path: '/product/:index',
         name: 'Product',
-        component: Product
+        component: Product,
+    },
+    {
+        path:'/ProductsItem/:index/:id',
+        name:'ProductsItem',
+        component:ProductsItem
     },
     {
         path: '/journalism',
