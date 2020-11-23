@@ -69,6 +69,9 @@ export default {
 		background: url('~@/assets/image/userImage/背景.png') no-repeat
 		background-size: 100% 100%
 		padding-top: 1.28rem
+		position: absolute
+		top: 0
+		left: 0
 		.contentBox
 			width: 76%
 			height: 66%
@@ -86,6 +89,7 @@ export default {
 				margin-left: 4%
 				li
 					margin-left: 0.05rem
+					color: white
 					&.active
 						color: #EFD8A6
 			.TitleBox
@@ -95,6 +99,7 @@ export default {
 				margin-top: 0.15rem
 				div
 					font-size: 0.6rem
+					color: white
 				p
 					font-size: 0.3rem
 					color: #EFD8A6
