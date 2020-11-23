@@ -66,7 +66,7 @@ export default {
       position: absolute
       top: 0
       left: 0
-      padding-top:.7rem
+      padding-top: 1，28rem
       .model
         width: 90vw
         height: 100vh
