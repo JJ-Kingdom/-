@@ -111,6 +111,7 @@ export default {
 						width: 3.31rem
 						height: 4.43rem
 						background: rgba(0, 175, 255, 0.271)
+						color: white
 						&.one:hover
 							background: rgba(0, 175, 255, 0.6)
 						.listTitle
@@ -126,7 +127,6 @@ export default {
 						.listText
 							font-size: 0.2rem
 							margin-top: 0.1rem
-							color: white
 						.listImage
 							width: 0.47rem
 							height: 0.61rem
@@ -139,6 +139,7 @@ export default {
 						width: 3.31rem
 						height: 4.43rem
 						background: rgba(255, 104, 104, 0.271)
+						color: white
 						&.tow:hover
 							background: rgba(255, 104, 104, 0.6)
 						.listTitle
@@ -166,6 +167,7 @@ export default {
 						width: 3.31rem
 						height: 4.43rem
 						background: rgba(128, 103, 255, 0.271)
+						color: white
 						&.three:hover
 							background: rgba(128, 103, 255, 0.6)
 						.listTitle
@@ -193,6 +195,7 @@ export default {
 						width: 3.31rem
 						height: 4.43rem
 						background: rgba(254, 137, 89, 0.271)
+						color: white
 						&.four:hover
 							background: rgba(254, 137, 89, 0.6)
 						.listTitle
