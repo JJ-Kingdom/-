@@ -220,7 +220,7 @@ i18n.locale='ch'
       .product-box
           width: 100%
           height: 100%
-          background: rgba(0,0,0 , .05)
+          background: rgba(0,0,0, .2) !important
           position: absolute
           top: 0
           left: 0
@@ -229,6 +229,7 @@ i18n.locale='ch'
             height: .16rem
             margin-top: .35rem
             display: flex
+
             span
               font-size: .14rem
             a
