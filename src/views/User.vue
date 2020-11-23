@@ -1,50 +1,63 @@
 <template lang="pug">
 	.user
 		.contentBox
+			<!-- el-switch(v-model="value1" active-text="中" inactive-text="英") -->
 			ul(class="topBtnBox animate__animated animate__fadeInLeft")
-				li 首页
+				li {{$t('message.homeNav')}}
 				li >
-				li(class="active") 联系我们
+				li(class="active" @click="onClick") {{$t('message.userNav')}}
 			.TitleBox(class="animate__animated animate__fadeInDown animate__delay-.5s")
 				div CONTACT US
-				p 联系我们
+				p {{$t('message.title')}}
 			.box
 				.boxList(class="one animate__animated animate__fadeInUpBig animate__delay-1s")
-					.listTitle(class="animate__animated animate__fadeInUp animate__delay-3s") 地址
+					.listTitle(class="animate__animated animate__fadeInUp animate__delay-3s") {{$t('message.itemOne.listTitle')}}
 					.listLine(class="animate__animated animate__fadeIn animate__delay-2s")
 					.listImage(class="animate__animated animate__fadeIn animate__delay-4s")
 					.listTextBox(class="animate__animated animate__fadeIn animate__delay-4-8s")
-						.listText 北京市大兴区
-						.listText 金苑路32号1墥
-						.listText 2层221室
+						.listText {{$t('message.itemOne.region')}}
+						.listText {{$t('message.itemOne.House')}}
+						.listText {{$t('message.itemOne.room')}}
 				.boxList(class="tow animate__animated animate__fadeInDownBig animate__delay-1s")
-					.listTitle(class="animate__animated animate__fadeInUp animate__delay-3s") 联系我们
+					.listTitle(class="animate__animated animate__fadeInUp animate__delay-3s") {{$t('message.itemTow.listTitle')}}
 					.listLine(class="animate__animated animate__fadeIn animate__delay-2s")
 					.listImage(class="animate__animated animate__fadeIn animate__delay-4s")
 					.listTextBox(class="animate__animated animate__fadeIn animate__delay-4-8s")
-						.listText 联系电话:021-1234567999
-						.listText 联系热线:100-1237999
+						.listText {{$t('message.itemTow.contactNumber')}}
+						.listText {{$t('message.itemTow.ContactHotline')}}
 				.boxList(class="three animate__animated animate__fadeInUpBig animate__delay-1s")
-					.listTitle(class="animate__animated animate__fadeInUp animate__delay-3s") 电子邮箱
+					.listTitle(class="animate__animated animate__fadeInUp animate__delay-3s") {{$t('message.itemThree.listTitle')}}
 					.listLine(class="animate__animated animate__fadeIn animate__delay-2s")
 					.listImage(class="animate__animated animate__fadeIn animate__delay-4s")
 					.listTextBox(class="animate__animated animate__fadeIn animate__delay-4-8s")
-						.listText 邮箱:XuanHe123@163.com
-						.listText 邮箱:XuanHe@qq.com
+						.listText {{$t('message.itemThree.mailBox1')}}
+						.listText {{$t('message.itemThree.mailBox2')}}
 				.boxList(class="four animate__animated animate__fadeInDownBig animate__delay-1s")
-					.listTitle(class="animate__animated animate__fadeInUp animate__delay-3s") 传真
+					.listTitle(class="animate__animated animate__fadeInUp animate__delay-3s") {{$t('message.itemFour.listTitle')}}
 					.listLine(class="animate__animated animate__fadeIn animate__delay-2s")
 					.listImage(class="animate__animated animate__fadeIn animate__delay-4s")
 					.listTextBox(class="animate__animated animate__fadeIn animate__delay-4-8s")
-						.listText 传真:10-99998888
-						.listText 传真:10-99977766
+						.listText {{$t('message.itemFour.fax1')}}
+						.listText {{$t('message.itemFour.fax2')}}
 				
 </template>
 
 <script>
 
 export default {
-  
+	data(){
+		return{
+			// value1: true
+		}
+	},
+	mounted(){
+		console.log(this.$i18n)
+	},
+	methods:{
+		onClick(){
+			this.$i18n.locale = this.$i18n.locale=='en'?'ja':'en'
+		}
+	}
 }
 </script>
 <style lang="sass">
@@ -56,18 +69,27 @@ export default {
 		background: url('~@/assets/image/userImage/背景.png') no-repeat
 		background-size: 100% 100%
 		padding-top: 1.28rem
+		position: absolute
+		top: 0
+		left: 0
 		.contentBox
 			width: 76%
 			height: 66%
 			background: transparent
 			margin: 0 auto
 			box-sizing: border-box
+			.el-switch
+				font-size: 0.14rem
+				position: fixed
+				top: 1.2rem
+				right: 15%
 			.topBtnBox
 				display: flex
 				font-size: 0.18rem
 				margin-left: 4%
 				li
 					margin-left: 0.05rem
+					color: white
 					&.active
 						color: #EFD8A6
 			.TitleBox
@@ -77,6 +99,7 @@ export default {
 				margin-top: 0.15rem
 				div
 					font-size: 0.6rem
+					color: white
 				p
 					font-size: 0.3rem
 					color: #EFD8A6
@@ -93,6 +116,7 @@ export default {
 						width: 3.31rem
 						height: 4.43rem
 						background: rgba(0, 175, 255, 0.271)
+						color: white
 						&.one:hover
 							background: rgba(0, 175, 255, 0.6)
 						.listTitle
@@ -120,6 +144,7 @@ export default {
 						width: 3.31rem
 						height: 4.43rem
 						background: rgba(255, 104, 104, 0.271)
+						color: white
 						&.tow:hover
 							background: rgba(255, 104, 104, 0.6)
 						.listTitle
@@ -147,6 +172,7 @@ export default {
 						width: 3.31rem
 						height: 4.43rem
 						background: rgba(128, 103, 255, 0.271)
+						color: white
 						&.three:hover
 							background: rgba(128, 103, 255, 0.6)
 						.listTitle
@@ -174,6 +200,7 @@ export default {
 						width: 3.31rem
 						height: 4.43rem
 						background: rgba(254, 137, 89, 0.271)
+						color: white
 						&.four:hover
 							background: rgba(254, 137, 89, 0.6)
 						.listTitle
@@ -197,6 +224,16 @@ export default {
 							margin: 0 auto
 							margin-top: 0.5rem
 							margin-bottom: 0.42rem
-					
-					
+@media screen and (max-width:1000px)
+	.box
+		width: 100% !important
+		display: flex !important
+		flex-wrap: wrap !important
+		flex: 1 !important
+		margin-top: 0.5rem !important
+		.boxList
+			width: 45% !important
+			height: 4rem !important
+			margin-Top: 0.5rem !important
+	
 </style>

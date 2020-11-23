@@ -19,4 +19,5 @@
   position: relative
   min-height: 100%
   font-size: 16px
+  overflow: hidden
 </style>
