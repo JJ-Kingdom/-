@@ -57,10 +57,16 @@ export default {
 
 <style lang="sass">
   .journalism
+      width: 100vw
       height: 100vh
       background: url(~@/assets/image/bg.png) no-repeat
       background-position: -6vw 0
       overflow: hidden
+      color: #fff
+      position: absolute
+      top: 0
+      left: 0
+      padding-top:.7rem
       .model
         width: 90vw
         height: 100vh
@@ -182,6 +188,7 @@ export default {
               h5
                 font-size: .2rem
                 position: absolute
+                white-space: nowrap
               &:nth-child(1) h5
                 left: -6vw
                 top: -.2vh
