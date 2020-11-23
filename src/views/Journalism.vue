@@ -3,22 +3,22 @@
     .model
       template(v-if='$route.meta.show')
         el-breadcrumb(separator-class="el-icon-arrow-right" class='title')
-          el-breadcrumb-item {{$t('cn.indexPage')}}
-          el-breadcrumb-item(:to="{path:'/journalism'}") {{$t('cn.subPage')}}
+          el-breadcrumb-item {{$t('indexPage')}}
+          el-breadcrumb-item(:to="{path:'/journalism'}") {{$t('subPage')}}
         p.title_sub(class='animate__animated animate__fadeInLeft') NEWS AND INFOORMATION
-        p.content_title(class='animate__animated animate__fadeInRight') {{$t('cn.subPage')}}
+        p.content_title(class='animate__animated animate__fadeInRight') {{$t('subPage')}}
         .content_jour
           .left
               .content_a(class='animate__animated animate__fadeInLeft')
                 .img(class='animate__animated animate__fadeIn')
                 .info
-                  router-link(class='animate__animated animate__fadeInDown hover' tag='p' to='/journalism/journalismDetail' @click='$route.meta.show = false') {{$t('cn.modulLeftTile')}}
-                  p(class='animate__animated animate__fadeInUp') {{$t('cn.moduLeftContent')}}
+                  router-link(class='animate__animated animate__fadeInDown hover' tag='p' to='/journalism/journalismDetail' @click='$route.meta.show = false') {{$t('modulLeftTile')}}
+                  p(class='animate__animated animate__fadeInUp') {{$t('moduLeftContent')}}
               .content_b(class='animate__animated animate__fadeInLeft')
                 .img2(class='animate__animated animate__fadeIn')
                 .info
-                  p(class='animate__animated animate__fadeInDown hover') {{$t('cn.moduLeftTile2')}}
-                  p(class='animate__animated animate__fadeInUp') {{$t('cn.moduLeftContent2')}}
+                  p(class='animate__animated animate__fadeInDown hover') {{$t('moduLeftTile2')}}
+                  p(class='animate__animated animate__fadeInUp') {{$t('moduLeftContent2')}}
 
           .line(class='animate__animated animate__fadeIn')
             span(class='animate__animated animate__fadeInUpBig')
@@ -32,20 +32,20 @@
           .right
             .content_c(class='animate__animated animate__fadeInRight hover')
               .info
-                p(class='animate__animated animate__fadeInDown') {{$t('cn.modulRightTile')}}
-                p(class='animate__animated animate__fadeInUp') {{$t('cn.modulRightContent')}}
+                p(class='animate__animated animate__fadeInDown') {{$t('modulRightTile')}}
+                p(class='animate__animated animate__fadeInUp') {{$t('modulRightContent')}}
               .img3(class='animate__animated animate__fadeIn')
             .content_d(class='animate__animated animate__fadeInRight')
               .info
-                p(class='animate__animated animate__fadeInDown') {{$t('cn.modulRightTile2')}}
-                p(class='animate__animated animate__fadeInUp') {{$t('cn.modulRightContent2')}}
+                p(class='animate__animated animate__fadeInDown') {{$t('modulRightTile2')}}
+                p(class='animate__animated animate__fadeInUp') {{$t('modulRightContent2')}}
               .img4(class='animate__animated animate__fadeIn')
         ul.page
-          li {{$t('cn.bottomIndex')}}
-          li {{$t('cn.bottomPrev')}}
-          li {{$t('cn.bottomCurrent')}}
-          li {{$t('cn.bottomNext')}}
-          li {{$t('cn.bottomEnd')}}
+          li {{$t('bottomIndex')}}
+          li {{$t('bottomPrev')}}
+          li {{$t('bottomCurrent')}}
+          li {{$t('bottomNext')}}
+          li {{$t('bottomEnd')}}
       router-view(v-else)
       
 </template>
@@ -66,7 +66,7 @@ export default {
       position: absolute
       top: 0
       left: 0
-      padding-top: 1，28rem
+      padding-top: 1.28rem
       .model
         width: 90vw
         height: 100vh
