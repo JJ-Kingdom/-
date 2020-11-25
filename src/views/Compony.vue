@@ -5,7 +5,7 @@
   main
     .titlebox.animate__animated.animate__fadeInDown.animate__delay-1s
       h1 BRAND INTRODUCTION
-      div 公司简介
+      //- div {{ $t( "compony.title" ) }}
     .centent
       .leftimgbox
         .bgbox.animate__animated.animate__fadeInLeft.animate__delay-1s
@@ -27,9 +27,10 @@
 </template>
 <script>
 import BScroll from "better-scroll";
+
 export default {
   mounted() {
-    // console.log(b)
+    console.log(this)
     this.$nextTick(() => {
       this.scroll = new BScroll(this.$refs.wrapper, {
         probeType: 3,
@@ -44,6 +45,9 @@ export default {
   overflow: hidden
   width: 100vw
   height: 100vh 
+  position: absolute
+  top:0
+  left:0
   background-image: url('../assets/image/背景.png')
   background-size: cover
   background-position: center 
@@ -132,6 +136,7 @@ export default {
             width: 6.21rem
             height: 3.92rem
             font-size: .17rem
+            color: #fff
             line-height: .32rem
           .better
             width: .05rem
