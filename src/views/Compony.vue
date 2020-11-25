@@ -50,7 +50,6 @@ export default {
   background-image: url('../assets/image/背景.png')
   background-size: cover
   background-position: center 
-  position: relative
   z-index: 0
   .backbox
     z-index: 1
@@ -89,6 +88,7 @@ export default {
     width: 80%
     .titlebox
       text-align: center
+      color: #fff 
       h1
         font-size: .6rem
         font-weight: 900
