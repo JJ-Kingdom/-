@@ -4,8 +4,7 @@
   .box
   main
     .titlebox.animate__animated.animate__fadeInDown.animate__delay-1s
-      h1 BRAND INTRODUCTION
-      //- div {{ $t( "compony.title" ) }}
+      h1 {{ $t( "compony.title" ) }}
     .centent
       .leftimgbox
         .bgbox.animate__animated.animate__fadeInLeft.animate__delay-1s
