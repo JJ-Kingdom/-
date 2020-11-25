@@ -15,7 +15,7 @@ const en = {
         text_5: 'About Us',
         text_6: 'Xuanhe E-commerce Co Ltd',
         text_7: 'Carry out operation and management to deepen the development of "track + property"',
-        text_8: 'It has always been committed to providing good products and "services to ordinary people, and through its own efforts, it has made its own contribution to the peoples demands for a better life in all aspects.In 2018, the company further upgraded its positioning to become a "service provider for urban and rural construction and life", and the ecological system it has built has begun to take shape.',
+        text_8: 'It has always been committed to providing good products and "services to ordinary people, and through its own efforts',
         text_9: ''
       },
       {
